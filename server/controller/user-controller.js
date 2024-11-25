@@ -41,9 +41,19 @@ module.exports.login = async (req, res) => {
 };
 module.exports.getUser = async (req, res) => {
   try {
-    const user = await User.find().populate('role');
+    const user = await User.aggregate([
+      {
+        $lookup: {
+          from: 'roles',
+          localField: 'role',
+          foreignField: '_id',
+          as: 'roles_details',
+        },
+      },
+      { $unwind: '$roles_details' },
+    ]);
     if (!user) {
-      return res.status(404).json({ message: 'dat is empty' });
+      return res.status(404).json({ message: 'ddat is empty' });
     }
     return res.status(200).json(user);
   } catch (error) {

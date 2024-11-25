@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    'navbar navbar'
+    'sidebar main'
+    'sidebar main';
+}
+.container .nav-bar {
+  grid-area: navbar;
+  position: sticky;
+  top: 0;
+  top: 0;
+  background-color: #f5f7f8;
+  height: 50px;
+  padding: 1rem;
+  display: flex;
+  font-family: 'Montserrat', serif;
+  font-weight: 900;
+  font-size: 25px;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: #ff7f3e;
+}
+.container .nav-bar .img {
+  display: flex;
+  gap: 20px;
+  margin-left: 30px;
+}
+.container .nav-bar .img img {
+  width: 40px;
+}
+.sidebar {
+  height: calc(100vh - 82px);
+  grid-area: sidebar;
+  position: sticky;
+  align-self: start;
+  top: 82px;
+
+  background-color: #f5f7f8;
+}
+
+.sidebar .bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 80px;
+}
+.sidebar .bar div {
+  background-color: #ff885b;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.p {
+  text-decoration: none;
+  color: black;
+}
+.p .active {
+  color: white;
+}
+.sidebar .bar div:hover {
+  padding: 5px;
+}
+.container .main {
+  grid-area: main;
+  padding: 40px;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  #side {
+    position: fixed !important;
+    width: 300px;
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+}
+.logout {
+  margin-right: 30px;
+}
+.logout button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  background-color: #1abced;
+  border-radius: 4px;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
