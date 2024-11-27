@@ -1,0 +1,11 @@
+.custom-input {
+  border-color: orange;
+  cursor: pointer;
+  margin-top: 15px;
+  height: 40px;
+}
+label {
+  font-family: 'Noto Sans JP', serif;
+  font-size: 15px;
+  font-weight: 500;
+}

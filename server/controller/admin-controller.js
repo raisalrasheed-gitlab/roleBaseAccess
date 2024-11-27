@@ -39,3 +39,7 @@ module.exports.login = async (req, res) => {
 
   return res.status(200).json({ message: 'you are login', token: token });
 };
+module.exports.getAdmin = async (req, res) => {
+  const admin = await Admin.find();
+  res.status(200).json(admin);
+};

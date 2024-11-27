@@ -68,9 +68,7 @@
   text-decoration: none;
   color: black;
 }
-.p .active {
-  color: white;
-}
+
 .sidebar .bar div:hover {
   padding: 5px;
 }
@@ -78,6 +76,9 @@
   grid-area: main;
   padding: 40px;
   height: auto;
+}
+.container .main h2 {
+  font-family: 'Rubik', serif;
 }
 
 @media (max-width: 800px) {

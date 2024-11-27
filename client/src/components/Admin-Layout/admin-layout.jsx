@@ -1,11 +1,16 @@
 import './admin-layout.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 
 const AdminLayout = ({ children, heading }) => {
+  const navigate = useNavigate();
   const side = document.getElementById('side');
   console.log(side);
   const sideBar = () => {
     side.cla.toggle('show');
+  };
+  const logout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
   };
 
   return (
@@ -13,29 +18,17 @@ const AdminLayout = ({ children, heading }) => {
       <div className="container">
         <div className="nav-bar">
           <div className="img">
-            <img src="10007857.png"></img>
             <div>
               Admin Control
               <button className="show" onClick={sideBar}></button>
             </div>
           </div>
           <div className="logout">
-            <button>Logout</button>
+            <button onClick={logout}>Logout</button>
           </div>
         </div>
         <div className="sidebar" id="side">
           <div className="bar">
-            <div className="link">
-              <NavLink className="p" to="/admin">
-                DashBoard
-              </NavLink>
-            </div>
-            <div className="link">
-              <NavLink className="p" to="/admin">
-                Admin
-              </NavLink>
-            </div>
-
             <NavLink className="p" to="/admin/user">
               <div className="link"> Users </div>
             </NavLink>
@@ -43,7 +36,7 @@ const AdminLayout = ({ children, heading }) => {
             <NavLink className="p" to="/admin/role">
               <div> Role</div>
             </NavLink>
-            <NavLink className="p" to="/admin">
+            <NavLink className="p" to="/admin/profile">
               <div className="link"> Profile</div>
             </NavLink>
           </div>

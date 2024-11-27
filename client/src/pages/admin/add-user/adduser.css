@@ -1,0 +1,40 @@
+.admin-add {
+  width: 90%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.admin-add div {
+  width: 350px;
+}
+.select {
+  width: 350px;
+  height: 40px;
+  border-color: orange;
+  border-radius: 5px;
+  display: block;
+}
+.admin-user-submit {
+  margin-top: 35px;
+}
+.admin-user-submit button {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background-color: #58b159;
+  color: white;
+  border-radius: 8px;
+}
+.back {
+  margin-left: 1000px;
+}
+.back button {
+  padding: 10px;
+  border: none;
+  background: #9dc4cf;
+  color: black;
+  font-size: 15px;
+  border-radius: 4px;
+}

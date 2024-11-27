@@ -24,6 +24,10 @@ const userSchema = Schema({
     type: String,
     default: 'http://localhost:9000/images/3039079-200.png',
   },
+  active: {
+    type: Boolean,
+    default: true,
+  },
   role: {
     type: Schema.Types.ObjectId,
     ref: 'roles',

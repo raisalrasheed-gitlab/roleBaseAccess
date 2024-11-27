@@ -17,9 +17,9 @@ app.use(express.static('public'));
 const routes = require('./Routes/index');
 
 app.use(routes);
-// app.use('*', (req, res) => {
-//   res.status(404).json({ message: 'no route found' });
-// });
+app.use('*', (req, res) => {
+  res.status(404).json({ message: 'no route found' });
+});
 app.listen(9000, () => {
   console.log('App is running @ port-->http://localhost:9000');
 });

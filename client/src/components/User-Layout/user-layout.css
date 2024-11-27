@@ -1,0 +1,17 @@
+.user-layout {
+  height: 60px;
+  background-color: #ff7f3e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-layout .name {
+  font-size: 25px;
+  font-family: 'Rubik', serif;
+  font-weight: 700;
+  margin-right: 250px;
+  color: white;
+}
+.user-layout .logout {
+  margin-left: 590px;
+}

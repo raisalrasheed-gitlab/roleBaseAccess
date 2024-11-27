@@ -1,0 +1,36 @@
+.user-login {
+  width: 400px;
+  margin: 100px auto;
+  background-color: aquamarine;
+  height: 300px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.user-login h3 {
+  font-family: 'Rokkitt', serif;
+  font-size: 35px;
+  text-align: center;
+}
+.user-login .submit {
+  background-color: rgb(33, 22, 22);
+  color: #45cd4f;
+  height: 40px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-left: 4px;
+}
+.user-login .admin {
+  background-color: rgb(33, 22, 22);
+  color: #45cd4f;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 195px;
+}

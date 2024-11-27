@@ -9,9 +9,9 @@ const checkToken = require('../middlewares/checktoken');
 
 const router = express.Router();
 
-router.get('/', getRoles);
-router.post('/', checkToken, postRoles);
+router.get('/', checkToken, getRoles);
+router.post('/', postRoles);
 router.patch('/:id', checkToken, patchRole);
-router.delete('/:id', checkToken, deleteRoles);
+router.delete('/:id', deleteRoles);
 
 module.exports = router;

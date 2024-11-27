@@ -1,3 +1,17 @@
 .admin-role-table {
-  margin-top: 50px;
+  margin-top: 60px;
+}
+.admin-role-add-btn {
+  position: absolute;
+  right: 40px;
+}
+.admin-role-add-btn button {
+  height: 40px;
+  width: 80px;
+  border: none;
+  background-color: #7ad601;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  font-family: 'Rubik', serif;
 }
